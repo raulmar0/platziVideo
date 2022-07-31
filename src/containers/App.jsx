@@ -9,11 +9,11 @@ import useInitialState from '../hooks/useInitialState'
 
 import '../assets/styles/App.scss'
 
-const API = 'http://localhost:3000/initialState/'
+const API = 'https://raulmarfiles.blob.core.windows.net/random/initialState.json'
 
 const App = () => {
   const initialState = useInitialState(API)
-
+  console.log(initialState.initalState)
   return initialState.length === 0 ? <h1>Loading...</h1> : (
     <div className="App">
       <Header />
